@@ -9,6 +9,7 @@
 - **构建工具**: [Vite](https://vite.dev/)
 - **UI 组件**: [shadcn/ui](https://ui.shadcn.com/)
 - **样式方案**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **代码格式化**: [Prettier](https://prettier.io/)
 
 ## 开始使用
 
@@ -48,6 +49,13 @@ pnpm dlx shadcn@latest add <component-name>
 pnpm dlx shadcn@latest add button
 pnpm dlx shadcn@latest add input
 pnpm dlx shadcn@latest add dialog
+```
+
+## 代码格式化
+
+```bash
+pnpm format        # 格式化代码
+pnpm format:check  # 检查代码格式
 ```
 
 ## 项目结构
