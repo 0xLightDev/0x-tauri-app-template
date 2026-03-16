@@ -1,4 +1,5 @@
 import { WebviewWindow } from "@tauri-apps/api/webviewWindow";
+import { LogicalPosition } from "@tauri-apps/api/dpi";
 import { emit, once } from "@tauri-apps/api/event";
 
 const createWindowLoading: Record<string, boolean> = {};
@@ -47,7 +48,11 @@ export async function hideWindow(label: string, destroyDelay = 5000) {
  * @param parentLabel Parent window label, defaults to current window
  * @returns Centered position coordinates or center flag
  */
-export async function calcCenterPosition(width: number, height: number, parentLabel?: string) {
+export async function calcCenterPosition(
+  width: number,
+  height: number,
+  parentLabel?: string
+): Promise<{ center: true } | { x: number; y: number }> {
   const parentWindow = parentLabel
     ? await WebviewWindow.getByLabel(parentLabel)
     : WebviewWindow.getCurrent();
@@ -172,11 +177,7 @@ export async function createWindow(
 
           if ("x" in centerPos && "y" in centerPos) {
             // Use Logical type to set window position
-            await window.setPosition({
-              type: "Logical",
-              x: centerPos.x,
-              y: centerPos.y,
-            });
+            await window.setPosition(new LogicalPosition(centerPos.x, centerPos.y));
             console.log("Window centered:", centerPos);
           }
         } catch (e) {
@@ -201,8 +202,8 @@ export async function createWindow(
       if ("center" in centerPos) {
         finalOptions.center = true;
       } else {
-        finalOptions.x = centerPos.x!;
-        finalOptions.y = centerPos.y!;
+        finalOptions.x = centerPos.x;
+        finalOptions.y = centerPos.y;
         finalOptions.center = false;
       }
     }
