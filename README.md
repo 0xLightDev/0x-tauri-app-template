@@ -2,6 +2,11 @@
 
 English | [简体中文](./README.zh-CN.md)
 
+[![Tauri](https://img.shields.io/badge/Tauri-2.0-24C8DB?logo=tauri)](https://tauri.app/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
+
 A modern desktop application template built with Tauri v2 + React 19 + TypeScript + shadcn/ui.
 
 ## Preview
@@ -147,6 +152,10 @@ To enable macOS and Linux builds, uncomment the corresponding platform configura
 - [VS Code](https://code.visualstudio.com/)
 - [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode)
 - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kitlib/tauri-app-template&type=Date)](https://star-history.com/#kitlib/tauri-app-template&Date)
 
 ## License
 

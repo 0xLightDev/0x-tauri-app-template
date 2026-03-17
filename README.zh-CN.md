@@ -2,6 +2,11 @@
 
 [English](./README.md) | 简体中文
 
+[![Tauri](https://img.shields.io/badge/Tauri-2.0-24C8DB?logo=tauri)](https://tauri.app/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
+
 基于 Tauri v2 + React 19 + TypeScript + shadcn/ui 的桌面应用模板。
 
 ## 预览
@@ -93,8 +98,8 @@ pnpm format:check  # 检查代码格式
 │   ├── src/               # Rust 源码
 │   └── tauri.conf.json    # Tauri 配置
 ├── docs/                  # 文档
-│   ├── AUTO_UPDATE.md     # 自动更新指南
-│   └── I18N.md            # 国际化指南
+│   ├── AUTO_UPDATE.zh-CN.md # 自动更新指南
+│   └── I18N.zh-CN.md      # 国际化指南
 ├── components.json        # shadcn/ui 配置
 └── package.json
 ```
@@ -128,7 +133,7 @@ git push origin v0.1.0
 
 **注意：** `tauri.conf.json` 中的公钥和更新端点会在构建过程中由 GitHub Actions 自动配置，无需手动设置。
 
-详细配置说明请查看 [自动更新配置文档](./docs/AUTO_UPDATE.md)。
+详细配置说明请查看 [自动更新配置文档](./docs/AUTO_UPDATE.zh-CN.md)。
 
 ### 代码签名（可选）
 
@@ -151,3 +156,7 @@ git push origin v0.1.0
 ## License
 
 MIT
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kitlib/tauri-app-template&type=Date)](https://star-history.com/#kitlib/tauri-app-template&Date)
