@@ -34,5 +34,11 @@ src-tauri/target/
 # grepai index
 .grepai/
 
-# Claude AI
-.claude/
+# Claude Code local settings
+.claude/settings.local.json
+
+# Claude Code auto-downloaded artifacts
+skills-lock.json
+
+# Thumbs
+Thumbs.db
