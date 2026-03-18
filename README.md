@@ -1,13 +1,13 @@
-# Tauri App Template
+# 0x Tauri App Template
 
-English | [简体中文](./README.zh-CN.md)
+Forked from [kitlib/tauri-app-template](https://github.com/kitlib/tauri-app-template).
 
 [![Tauri](https://img.shields.io/badge/Tauri-2.0-24C8DB?logo=tauri)](https://tauri.app/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
-A modern desktop application template built with Tauri v2 + React 19 + TypeScript + shadcn/ui.
+A modern desktop application template built with Tauri v2 + React 19 + TypeScript + shadcn/ui + Supabase.
 
 ## Preview
 
@@ -23,6 +23,7 @@ A modern desktop application template built with Tauri v2 + React 19 + TypeScrip
 - 🗂️ **Multi-Window Management** - Support for child windows, window lifecycle management, and delayed destruction
 - 🔔 **System Tray Integration** - Tray icon, menu, and window show/hide support
 - ⌨️ **Global Shortcuts** - Register global shortcuts that work even when app is not focused
+- 🗄️ **Supabase Integration** - Pre-configured Supabase client for auth and data storage
 - 📦 **Ready to Use** - Pre-configured with Prettier and TypeScript strict mode
 - 🚀 **Fast Development** - Vite HMR + Tauri hot reload
 
@@ -33,6 +34,7 @@ A modern desktop application template built with Tauri v2 + React 19 + TypeScrip
 - **Build Tool**: [Vite](https://vite.dev/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Backend/Auth**: [Supabase](https://supabase.com/) (client pre-configured)
 - **Code Formatting**: [Prettier](https://prettier.io/)
 
 ## Getting Started
@@ -48,6 +50,14 @@ A modern desktop application template built with Tauri v2 + React 19 + TypeScrip
 ```bash
 pnpm install
 ```
+
+### Configure Environment Variables
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your [Supabase](https://supabase.com/) project credentials (`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`).
 
 ### Development Mode
 
@@ -92,7 +102,7 @@ pnpm format:check  # Check code formatting
 │   ├── i18n/              # Internationalization
 │   │   ├── index.ts       # i18n configuration
 │   │   └── locales/       # Translation files
-│   ├── lib/               # Utility functions
+│   ├── lib/               # Utility functions (includes Supabase client)
 │   ├── App.tsx            # Main app component
 │   └── main.tsx           # Entry point
 ├── src-tauri/             # Tauri/Rust backend
@@ -155,9 +165,9 @@ To enable macOS and Linux builds, uncomment the corresponding platform configura
 - [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode)
 - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
 
-## Star History
+## Upstream
 
-[![Star History Chart](https://api.star-history.com/svg?repos=kitlib/tauri-app-template&type=Date)](https://star-history.com/#kitlib/tauri-app-template&Date)
+This template is forked from [kitlib/tauri-app-template](https://github.com/kitlib/tauri-app-template) with Supabase integration added.
 
 ## License
 

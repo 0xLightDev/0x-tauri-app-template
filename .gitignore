@@ -23,5 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Tauri build output
+src-tauri/target/
+
+# grepai index
+.grepai/
+
 # Claude AI
 .claude/
